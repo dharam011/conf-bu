@@ -1,63 +1,115 @@
-// Fetch and inject the header and hero section dynamically
+// Wait for DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("header-hero.html")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Failed to load header-hero.html");
-            }
-            return response.text();
-        })
-        .then(data => {
-            document.getElementById("header-hero-placeholder").innerHTML = data;
-            setupNavigation(); // Setup navigation after loading header
-        })
-        .catch(error => {
-            console.error("Error loading header and hero section:", error);
-        });
+    // First load the header
+    loadHeader();
+    
+    // Then handle initial page content based on URL
+    handleRoute(window.location.pathname);
 });
 
-// Function to handle navigation without reloading
-function navigateTo(url) {
-    // Use the History API to change the URL
-    window.history.pushState({}, '', url);
-
-    // Load new content based on the URL
-    fetch(url)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("content-placeholder").innerHTML = data;
+// Function to load the header
+function loadHeader() {
+    fetch("header-hero.html")
+        .then(response => {
+            if (!response.ok) throw new Error("Failed to load header");
+            return response.text();
         })
-        .catch(error => {
-            console.error("Error loading content:", error);
-        });
+        .then(html => {
+            // Extract just the header content from the loaded HTML
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const header = doc.querySelector('header');
+            
+            // Insert the header
+            document.getElementById("header-hero-placeholder").innerHTML = header.outerHTML;
+            
+            // Setup navigation event listeners
+            setupNavigation();
+        })
+        .catch(error => console.error("Error loading header:", error));
 }
 
-// Setup navigation links to use SPA behavior
+// Setup click handlers for navigation
 function setupNavigation() {
     document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default link behavior
-            navigateTo(this.getAttribute('href')); // Navigate without reload
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const path = link.getAttribute('href');
+            navigateTo(path);
         });
     });
 }
 
-// Handle back/forward navigation
-window.addEventListener('popstate', () => {
-    // Load content based on the current URL
-    fetch(window.location.pathname)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("content-placeholder").innerHTML = data;
+// Handle navigation
+function navigateTo(path) {
+    // Update URL without page reload
+    window.history.pushState({}, '', path);
+    // Load the new content
+    handleRoute(path);
+}
+
+// Handle different routes
+function handleRoute(path) {
+    // Default to index if path is just "/"
+    if (path === '/' || path === './') {
+        path = 'index.html';
+    } else if (path.startsWith('./')) {
+        path = path.slice(2); // Remove './' from the path
+    }
+    
+    // Don't reload the entire page if we're already on it
+    if (path === window.location.pathname && path !== 'index.html') {
+        return;
+    }
+
+    // Fetch and load the new page content
+    fetch(path)
+        .then(response => {
+            if (!response.ok) throw new Error(`Failed to load ${path}`);
+            return response.text();
         })
-        .catch(error => {
-            console.error("Error loading content:", error);
+        .then(html => {
+            // Parse the HTML
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            
+            // Find the main content (everything after header-hero-placeholder)
+            const mainContent = Array.from(doc.body.children).filter(el => 
+                el.id !== 'header-hero-placeholder' && 
+                !el.matches('script')
+            );
+            
+            // Clear existing content after header
+            const headerPlaceholder = document.getElementById('header-hero-placeholder');
+            while (headerPlaceholder.nextElementSibling) {
+                headerPlaceholder.nextElementSibling.remove();
+            }
+            
+            // Insert new content
+            mainContent.forEach(element => {
+                document.body.appendChild(element.cloneNode(true));
+            });
+            
+            // Re-attach event listeners for the new content
+            setupContentListeners();
+        })
+        .catch(error => console.error("Error loading page:", error));
+}
+
+// Handle browser back/forward buttons
+window.addEventListener('popstate', () => {
+    handleRoute(window.location.pathname);
+});
+
+// Setup any additional content-specific event listeners
+function setupContentListeners() {
+    // Register button handler
+    const registerButton = document.getElementById('registerButton');
+    if (registerButton) {
+        registerButton.addEventListener('click', () => {
+            window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSd-SfkZ7eOi5V6SS1ztwOhfHU2wapiUNQA9LlfZvsg40AO0Dw/viewform';
         });
-});
-
-// script.js
-
-document.getElementById('registerButton').addEventListener('click', function() {
-    window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSd-SfkZ7eOi5V6SS1ztwOhfHU2wapiUNQA9LlfZvsg40AO0Dw/viewform';
-});
-// 
+    }
+    
+    // Add any other content-specific event listeners here
+}
