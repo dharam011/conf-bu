@@ -16,13 +16,14 @@ header {
 }
 
 header .logo {
-    font-size:5vh;
+  
+     font-size:.7vw;
     font-weight: bold;
     
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 4vh;
+    gap: 1.6vw;
     
 }
 .logo img{
