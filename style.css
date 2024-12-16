@@ -61,6 +61,9 @@ header .nav-links a {
 header .nav-links a:hover {
     color: darkgoldenrod;
 }
+.account-details ul li{
+    font-size: 2.5em;
+}
 
 .publication p{
    width: 70%;
