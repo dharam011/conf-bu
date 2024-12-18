@@ -377,6 +377,8 @@ header {
     font-size: 2vh;
     margin-bottom: 3vmax;
     margin-top: 2vh;
+    text-align: center;
+    
 }
 
 table {
@@ -417,7 +419,7 @@ li {
     font-size: 1.2em;
 }
 .publication h2 a {
-    font-size: 1.8vmax;
+    font-size: 1.7vmax;
 }
 
 .register {
@@ -447,16 +449,19 @@ li {
         margin: 0;
     }
     h1 {
-        font-size: 1.5em;
+        font-size: 1em;
     }
 
     th, td {
-        font-size: 0.9em;
-        padding: 5px;
+        font-size: .7em;
+        
     }
 
     .reg-instruction, .account-details, .imp-dates, .publication, .Accommodation,#imp-dates {
         margin: 10px;
+    }
+    .publication a{
+        font-size: .8em;
     }
 
     .register button {
@@ -504,7 +509,7 @@ li {
 }
 
 footer {
-    background-color:rgba(72, 72, 166, 0.504);
+    background-color:rgba(14, 14, 60, 0.582);
     padding: 20px;
     text-align: center;
 }
@@ -535,7 +540,7 @@ footer .university-name p {
     }
 
     .Org-team h2 {
-        font-size: 1.3em;
+        
        margin-left: 10%;
         text-align: center;
         display: flex;
@@ -566,6 +571,9 @@ footer .university-name p {
 
     footer .university-name p {
         font-size: 0.9em;
+    }
+    .speakers h1,.contact h1, .Org-team h2, .call-for-papers h1 {
+        font-size: 1em;
     }
 }
 
@@ -604,17 +612,7 @@ footer .university-name p {
     font-size: 1.2em;
 }
 
-footer {
-    background-color: #f2f2f2;
-    padding: 20px;
-    text-align: center;
-}
 
-footer .university-name p {
-    margin: 0;
-    font-size: 1em;
-    color: #333;
-}
 
 /* Responsive styles for tablets and smaller screens */
 @media (max-width: 768px) {
@@ -698,17 +696,7 @@ footer .university-name p {
     line-height: 1.5;
 }
 
-footer {
-    background-color: #f2f2f2;
-    padding: 20px;
-    text-align: center;
-}
 
-footer .university-name p {
-    margin: 0;
-    font-size: 1em;
-    color: #333;
-}
 
 /* Responsive styles for tablets and smaller screens */
 @media (max-width: 768px) {
@@ -790,17 +778,7 @@ footer .university-name p {
     color: #0056b3;
 }
 
-footer {
-    background-color: #f2f2f2;
-    padding: 20px;
-    text-align: center;
-}
 
-footer .university-name p {
-    margin: 0;
-    font-size: 1em;
-    color: #333;
-}
 
 /* Responsive styles for tablets and smaller screens */
 @media (max-width: 768px) {
