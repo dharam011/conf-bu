@@ -14,15 +14,19 @@ html , body{
 .hero {
     position: relative;
     overflow: hidden;
-    margin-top: 3vh;
+    margin-top: 1vmin;
     height: 75vh;
 }
 .hero .slider .slide{
     width: 100%;
+    height: 75vh;
+    background-size: cover;
+    background-position:  bottom center;
 }
 .hero-details {
     text-shadow: 2px 2px 4px rgba(34, 85, 155, 0.5);
     position: absolute;
+    margin-top: 3vh;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -53,6 +57,8 @@ html , body{
     line-height: 1em;
 }
 .brochure {
+    margin-top: 2vh;
+    align-items: center;
     display: flex;
     justify-content: center;
    
@@ -195,10 +201,14 @@ html , body{
         margin: 10px 0;
     }
     .hero-details{
-        height: 60%;
+        height: 70%;
+        margin-top: -3vh;
     }
     .hero-details h1 {
         font-size: 1.8em;
+    }
+    section.hero{
+        height: 60%;
     }
 .hero .slider .slide{
     height: 60vh;
@@ -349,18 +359,24 @@ header {
 .account-details p{
     font-size: 1.3em;
 }
-.reg-instruction h1 ,#imp-dates h1,.account-details h1{
+.reg-instruction h1, 
+#imp-dates h1, 
+.account-details h1, 
+.speakers h1, 
+.call-for-papers h1, 
+.contact h1, 
+.Org-team h2 {
     display: flex;
     background-color: #0056b3;
     justify-content: center;
     color: white;
     width: 80%;
-    display: flex;
     margin-left: 10%;
     border-radius: 50px;
     padding: 1vh;
     font-size: 2vh;
     margin-bottom: 3vmax;
+    margin-top: 2vh;
 }
 
 table {
@@ -418,8 +434,11 @@ li {
     border-radius: 5px;
     cursor: pointer;
 }
-.Accommodation p, .publication p{
-    font-size: 1.2em;
+.Accommodation p, .publication p , .Accommodation{
+    font-size: 1.3em;
+}
+#imp-dates a {
+    font-size: 1.3em;
 }
 /* Responsive styles for mobile devices */
 @media (max-width: 480px) {
@@ -457,7 +476,7 @@ li {
     margin-bottom: 10px;
 }
 
-.Org-team h2 {
+/* .Org-team h2 {
     font-size: 5em;
     background-color: #0056b3;
     color: white;
@@ -467,7 +486,7 @@ li {
     font-size: 1.2vmax;
     padding: 2vh;
     text-align: center;
-}
+} */
 
 .Org-team h1 {
     font-size: 1.5em;
@@ -554,7 +573,7 @@ footer .university-name p {
 
 
 
-.call-for-papers h1 ,.speakers h1, .contact h1{
+/* .call-for-papers h1 ,.speakers h1, .contact h1{
     font-size: 1.5em;
     color: white;
     background-color:#0056b3;
@@ -562,7 +581,7 @@ footer .university-name p {
     padding: 1vh;
     text-transform: capitalize;
     border-radius: 50px;
-}
+} */
 
 .call-for-papers h2 {
     font-size: 1.5em;
@@ -637,12 +656,13 @@ footer .university-name p {
 
 
 
-.speakers h1 {
+/* .speakers h1 {
     font-size: 2em;
-    color: white;
+    color: white; 
     margin-bottom: 20px;
     padding: 1vh;
-}
+} */
+
 
 #speaker-list {
     display: flex;
@@ -738,10 +758,10 @@ footer .university-name p {
     margin-bottom: 10px;
 }
 
-.contact h1 {
+/* .contact h1 {
     font-size: 1.7em;
     color: white;
-}
+} */
 
 .contact h2 {
     font-size: 1.5em;
