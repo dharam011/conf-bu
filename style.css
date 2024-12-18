@@ -1,90 +1,14 @@
-body {
+*{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: serif;
-   
-}
 
-header {
-    background-color: #4e070748;
-  width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 3vh;
-    flex-direction: column;
-   
 }
+html , body{
+    height: 100%;
+    width: 100%;
 
-header .logo {
-  
-     font-size:.7vw;
-    font-weight: bold;
-    
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2.5vw;
-    
-}
-.logo img{
-    height: 10vw;
-}
-
-header .nav-links {
-   
-    list-style: none;
-    display: flex;
-    margin-right: 2vw;
- 
-    margin-left: 2vw;
-    
-    
-   gap: 5vw;
-    
-   
-
-    
-}
-
-td[colspan="4"] {
-    text-align: center;
-    font-weight: bold;
-    color: red;
-}
-header .nav-links a {
-    color: white;
-    font-weight: 500;
-    text-decoration: none;
-    font-size: 1.5vw; /* Use vw for responsive font size */
-    text-transform: uppercase;
-}
-header .nav-links a:hover {
-    color: darkgoldenrod;
-}
-.account-details ul li{
-    font-size: 2.5em;
-}
-
-.publication p{
-   width: 70%;
-}
-.Accommodation a {
-    margin-top: -2vh;
-    font-size: 3vh;
-  
-}
-
-
-
-
-header nav .nav-links a{
-    color: #003366;
-    font-weight: 600;
-    font-size: 3vh;
-    text-transform: capitalize;
-}
-.call-for-papers ul li {
-    line-height: 3vh;
 }
 
 .hero {
@@ -93,762 +17,809 @@ header nav .nav-links a{
     margin-top: 3vh;
     height: 75vh;
 }
-
-.slider {
-    display: flex;
-    height: 100%;
-    
-}
-
-.slide {
+.hero .slider .slide{
     width: 100%;
-    
-  
-    background-repeat: no-repeat;
-    background-position:  bottom;
-    background-size: cover;
-  
 }
-
-.hero-details { 
-    
-  
+.hero-details {
     text-shadow: 2px 2px 4px rgba(34, 85, 155, 0.5);
-   
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
     background-color: #302c2cb1;
-   
     border-radius: 10px;
     width: 80%;
-    
+    height: 80%;
+    padding-top: 4vh;
 }
 
 .hero-details h1 {
-    margin: 0;
+    
     font-size: 2.5em;
     color: yellow;
-  
 }
 
 .hero-details p {
     margin: 10px 0;
     font-size: 3vh;
-   color:white;
+    color: white;
 }
-.hero-details h2{
-    color:white;
+
+.hero-details h2 {
+    color: white;
     font-size: 1.6em;
-    line-height: .5em;
-    
+    line-height: 1em;
+}
+.brochure {
+    display: flex;
+    justify-content: center;
    
 }
-
-@keyframes slide {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-100%); }
-    50% { transform: translateX(-200%); }
-    75% { transform: translateX(-300%); }
-    100% { transform: translateX(0); }
+.brochure a:hover{
+    background-color:royalblue;
+    
 }
-
-@media (max-width: 768px) {
-    header .nav-links li {
-        margin-left: 10px;
-    }
-
-    .hero-details h1 {
-        font-size: 28px;
-    }
-
-    .hero-details p {
-        font-size: 16px;
-    }
-}
-.details {
-    padding: 40px 20px;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-.details .container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.details h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #003366;
-}
-
-
-.details p {
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-
-.details ul {
-    list-style: disc;
-    padding-left: 20px;
-}
-
-.details li {
-    margin-bottom: 10px;
-}
-
-@media (max-width: 768px) {
-    .details h2 {
-        font-size: 24px;
-    }
-
-    .details p {
-        font-size: 14px;
-    }
-}
-
-
-
-.register-form label {
-  
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.register-form input,
-.register-form select,
-.register-form button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
+.brochure a {
+    display: inline-block;
+    font-size: 3vh;
+    padding: 10px 20px;
+    background-color: crimson;
+    color: white;
+    text-decoration: none;
     border-radius: 5px;
 }
+.tourist-place {
+    display: flex;
+}
 
-.register-form button {
-    background-color: #003366;
+.about {
+    display: flex;
+    justify-content: space-between;
+    margin:0 5vmin;
+
+}
+.about .left h3{
+    background-color: #21a4dc;
+    padding: 1vh;
+    font-size: 1.5em;
+    margin-bottom: 1vh;
+}
+
+.about .left h2{
+    background-color: #21a4dc;
+    padding: 1vh;
+    font-size: 1.5em;
+}
+.about .left {
+    flex: 1;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    margin-top: 2vw;
+}
+.about .left p{
+    text-align: justify;
+    font-size: 1.3vw;
+    line-height: 1.5vw;
+}
+.about .left h1{
+    background-color: #21a4dc;
+    padding: 1vh;
+    font-size: 1.5em;
+}
+
+.about .right-img, .about .right-img2, .about .right-img3, .about .right-img4 {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.about .right-img img{
+    width: 35vw;
+}
+ .about .right-img2 img{
+    height: 28vw;
+    width: 35vw;
+
+ } .about .right-img3 img{
+    height: 28vw;
+    width: 35vw;
+
+ } .about .right-img4 img{
+    width: 30vw;
+    height: 10vw;
+
+ }
+
+.about img {
+    
+    margin: 10px;
+}
+
+.register{
+    display: flex;
+    justify-content: center;
+}
+#registerButton {
+    background-color: crimson;
+    
+    font-size: 3vh;
+}
+#registerButton:hover{
+    background-color:royalblue;
+}
+.register button {
+    padding: 10px 20px;
+    font-size: 3em;
+   
+    
     color: white;
-    font-size: 16px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.register-form button:hover {
-    background-color: darkgoldenrod;
-}
-.logo .confImg{
-    padding: 10px;
-    
-    
-    margin-left: 10px;
-    
-}
-.Sec-About{
-    margin: 20px;
-   
-
-}
-.Sec-About p{
-font-size: 25px;
-font-weight: 500;
-}
-
-
-
-table {
-    width: 65%;
-    border-collapse: collapse;
-    margin: 10px auto;
-}
-
-th, td {
-    border: 1px solid #000;
-    font-size: 1.2vw;
-   
-    padding: 5px;
-    text-align: center;
-    font-weight: 700;
-  
-}
-table .one{
-    width: 35%;
-}
-.about .left h1 {
-    margin-top: 6vh;
-}
-th {
-    background-color: #f0f0f0;
-}
-
-caption {
-    font-weight: bold;
-    font-size: 1.5em;
-    margin-bottom: 30px;
-    background-color: #003366;
-   color: #ffffff;
-    padding: 10px;
-    border-radius: 50px;
-}
 .imp-dates {
-    width: 70%;
-    border-collapse: collapse;
-    margin: 20px auto;
-    margin-top: 2vh
-   
+    margin:0 9vmin;
     
-     
 }
-.account-details,.speakers,.Accommodation{
-    width: 70%;
-    border-collapse: collapse;
-    margin: 20px auto;
-    margin-top: 2vh;
-    
-     
-}
- .speakers h1,.Accommodation h1{
-    font-weight: bold;
-    font-size: 1.5em;
-    margin-bottom: 3vh;
-    background-color: #003366;
-   color: #ffffff;
-    padding: 10px;
-    border-radius: 50px;
-    text-align: center;
-}
-.imp-dates h1{
-    font-weight: bold;
-    font-size: 1.5em;
-   margin-top: -3vw;
-   margin-top: 2vh;
-    background-color: #003366;
-   color: #ffffff;
-    padding: 10px;
-    border-radius: 50px;
-    text-align: center; 
-}
-.account-details h1{
-    font-weight: bold;
-    font-size: 1.5em;
-    margin-bottom: 3vh;
-    background-color: #003366;
-   color: #ffffff;
-    padding: 10px;
-    border-radius: 50px;
+
+.imp-dates h1 {
+    background-color: #21a4dc;
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: black;
+    padding: 1vh;
     text-align: center;
 }
 
-
-.imp-dates ul{
-    font-size: 1.4em;
-   
-    text-decoration: none;
-    margin-bottom: 2vw;
-}
-.imp-dates a {
-    line-height: 4vh;
-    font-size: 3vh;
+.imp-dates ul {
+    list-style: none;
+    padding: 0;
 }
 
-.register {
-    
-    border-collapse: collapse;
-    margin: 20px auto;
-    text-align: center; 
-    margin-top: 2vh;
-}
-.register button{
-    width: 20vw;
-    font-weight: bold;
+.imp-dates li {
+    margin: 5px 0;
     font-size: 1.2em;
-    margin-bottom: 30px;
-    background-color: #003366;
-   color: #fff;
-    padding: 20px;
-    border-radius: 50px;
-    text-align: center;
-    border: 3px solid rgb(47, 255, 0);
-
-   
-    
 }
 
+/* Responsive styles for tablets and smaller screens */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+    }
 
-.account-details ul li {
-    font-size: 20px;
+    .about .left, .about .right-img, .about .right-img2, .about .right-img3, .about .right-img4 {
+        margin: 10px 0;
+    }
+    .hero-details{
+        height: 60%;
+    }
+    .hero-details h1 {
+        font-size: 1.8em;
+    }
+.hero .slider .slide{
+    height: 60vh;
+    width: 100%;
+    background-position: center bottom;
+    margin-top: -2vh;
+    object-fit: cover;
+    margin-bottom: 0;
 }
-.account-details p {
-    font-size: 1.3vw;
-}
-.speakers p{
-font-size: 1.5em;
-font-weight: 600;
-}
-.register button:hover{
-    background-color: #1a85af;
-}
-.reg-instruction{
-    width: 70%;
-    border-collapse: collapse;
-    margin: 20px auto;
-    margin-top: 40px;
-    
-    
-}
-.reg-instruction h1 , .publication h1{
-
-    font-weight: bold;
-    font-size: 1.5em;
-    margin-bottom: 30px;
-    background-color: #003366;
-   color: #ffffff;
-    padding: 10px;
-    border-radius: 50px; 
-    text-align: center;
-}
-.publication h1 {
-    width: 70%;
-    margin-left: 15%;
-}
-.publication p {
-    font-size: 3vh;
-    margin-left: 15%;
-}
-.publication h2 {
-    font-size: 2.5vh;
-    margin-left: 15%;
-    font-weight: 800;
-
-}
-.publication h2 a {
-    font-size: 2.7vh;
-    font-weight: 500;
-}
-.reg-instruction ul li{
-    color: #dd4b31;
-    font-size: 1.3em;
-   
-}
-.Accommodation p, .Accommodation a{
-    font-size: 1.3em;
-    line-height: 3vh;
-    
-}
-.Org-team{
-    
-    border-collapse: collapse;
-    margin: 20px auto;
-    margin-top: 35px;
-   margin-left: 15%;
-
-    
-}
-.Org-team h2{
-    font-weight: bold;
-    width: 80%;
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    background-color: #003366;
-   color: #ffffff;
-    padding: 10px;
-    border-radius: 50px; 
-    text-align: center;
-    font-weight: 500;
-    
-}
-.Org-team h1{
-    color: rgb(226, 21, 21);
-    font-size: 1.5em;
-    text-decoration: underline;
-    font-weight:500;
-    line-height: .2vh;
-    width: max-content;
-    
-}
-.Org-team h3{
-   
-    font-size: 1.3em;
-   
-   color:#003366 ;
-   
-   line-height: 1em;
-   font-weight: 500;
-   
-    
-    
-}
-.contact h1{
-
-    text-align: center;
-    width: 70%;
-    background-color:#003366;
-    color: #fff;
-    border-radius: 50px;
-    padding: 1vh ;
-    margin:  2vh 14%;
-}
-.number {
-    font-size: 1.2em;
-    font-weight: 400;
-}
-.about{
-    display: flex;
-      align-items: flex-start;
-
-
-    justify-content: space-between;
-   
-gap: 5vh;
-  margin: -2vh 15vh;
-
-}
-.about .left h1 {
-    text-decoration: underline;
-    color: #003366;
-    font-size: 1.5em;
-    
-
-
-}
-.about .left .start-p{
-    text-align: justify;
-    font-size: 1.2em;
-    font-weight: 100;
-    line-height: 1.3em;
-    letter-spacing: 0vw;
-    word-spacing: .5vh;
-    width: 85vh;
-    
-
-    
-}
-.about .left .start-p1{
-    text-align: justify;
-    font-size: 1.2em;
-    font-weight: 100;
-    line-height: 1.3em;
-    letter-spacing: 0vw;
-    word-spacing: .5vh;
-    width: 80vh;
-    
-
-    
-}
-.about h2{
-    font-size: 1.5em;
-    font-weight: 500;
-    line-height: 1vh;
-}
-.right-img4 img {
-   width: 50vh;
-   height: 22vh;
-   background-size: cover;
-   background-position: center;
-   object-fit: cover;
-   
-   margin-bottom: 3vh;
-  
-
-}.right-img4 {
-   margin-top: 3vh;
-   
+    .hero-details h2, .hero-details p {
+        font-size: 1.2em;
+    }
 }
 
+/* Responsive styles for mobile devices */
+@media (max-width: 480px) {
+    .hero-details h1 {
+        font-size: 1.5em;
+    }
 
-
-.about .right-img img{
+    .hero-details h2, .hero-details p {
+        font-size: 1em;
+    }
  
-  width: 63vh;
-  margin-top: -3vh;
 
-height: 57vh; 
- object-fit: cover;
-    object-position: center;
-    margin-top: 3vw;
-
-}
-.about .right-img2 img{
- 
-    width: 60vh;
-  
-  height: 42vh;  object-fit: cover;
-      object-position: center;
-      margin-top: 3vw;
-  
-  }
-  .about .right-img3 img{
- 
-    width: 60vh;
-  
-  height: 50vh;  object-fit: cover;
-      object-position: center;
-      margin-top: 3vw;
-  
-  }
-
-.about .left .last-dept
-{
-    line-height: 1.1;
-    text-align: justify;
-    font-size: 1.2em;
-    font-weight: 100;
+    .brochure a, #registerButton{
+        width: 60%;
+        margin: 10px auto;
+        display: block;
+        text-align: center;
+        font-size: 5vw;
+    }
+    .about .left p{
+        font-size: 4vw;
+        line-height: normal;
+    }
     
-    letter-spacing: 0vw;
-    word-spacing: .5vh;
-    
-}
-.about .left .last-reg
-{  
-    line-height: 1.1;
-    text-align: justify;
-    font-size: 1.2em;
-    font-weight: 100;
-    margin-right: 15vh;
-    letter-spacing: 0vw;
-    word-spacing: .5vh;
-    margin-bottom: 2vh;
-    
-}
-.left h3 {
-   text-align: center;
-   color: white;
-   font-size: 3vh;
-   background-color:#003366;
-   border-radius: 50px;
-   padding: 1.5vh 0;
+    .about .right-img img, .about .right-img2 img, .about .right-img3 img, .about .right-img4 img {
+       height: 30vh;
+       width: 80vw;
+    }
+    .imp-dates h1 {
+        font-size: 1.5em;
+    }
+
+    .imp-dates li {
+        font-size: 1em;
+    }
 }
 
-
-
-
-
-
-
-
-
-
-footer {
-    background-color: #2c3e50; /* Dark background for footer */
-    color: #ffffff; /* White text */
-    text-align: center;
-    padding: 20px 10px;
-    position: relative;
-    bottom: 0;
-   
-   
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
+header {
+    background-color: #4e070748;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
 }
 
-.university-name, .design-developed {
-    margin: 10px 0;
+.logo {
+
+    display: flex;
+    align-items: center;
+    gap: 5vw;
 }
 
-
-
-
-.call-for-papers{
-    width: 80%;
-    margin-left: 10%;
-    line-height: 1.2em;
-
+.logo img {
+    height: auto;
+    width: 10vw;
 }
 
-.call-for-papers h1{
-    text-align: center;
-    background-color: #003366;
-    color: white;
-    font-size: 1.3em;
-    border-radius: 50px;
-    padding: 10px;
-}
-.call-for-papers p{
-    font-size: 1.3em;
-    font-weight: 700;
-    color: #dd4b31;
-}
-.call-for-papers h2{
-    font-size: 1.5em;
-    text-decoration: underline;
-    font-weight: 600;
-    color: #003366;
-
-}
-.call-for-papers li{
-    font-size: 1.3em;
-    font-weight: 500;
-    line-height: .7em;
-    text-align: justify;
-   
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2vw;
 }
 
-/* Mobile devices (max-width: 480px) */
-@media (max-width: 480px) {
+.nav-links a {
+    color: rgb(12, 93, 169);
+    text-decoration: none;
+    font-size: 1.5vmax;
+    text-transform: capitalize;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: darkgoldenrod;
+}
+
+/* Responsive styles for tablets and smaller screens */
+@media (max-width: 600px) {
     header {
         flex-direction: column;
         align-items: flex-start;
     }
-
-    .hero-details h1 {
-        font-size: 24px;
+    .about .left h3{
+        font-size: 2vh;
+    }
+    .about .left h2{
+        font-size: 1.7vh;
     }
 
-    .hero-details p {
-        font-size: 14px;
-    }
-
-    .details h2 {
-        font-size: 22px;
-    }
-
-    .details p {
-        font-size: 12px;
-    }
-
-    .about {
-        flex-direction: column;
-        gap: 2vw;
-    }
-
-    .about .right-img img {
-        width: 80vw;
-        height: auto;
-    }
-}
-
-/* Tablets (max-width: 768px) */
-@media (max-width: 768px) {
-    header .nav-links {
-        flex-direction: column;
+    .nav-links {
+       
         align-items: flex-start;
+        gap: 1vmin;
     }
-
-    .hero-details h1 {
-        font-size: 28px;
-    }
-
-    .hero-details p {
-        font-size: 16px;
-    }
-
-    .details h2 {
-        font-size: 24px;
-    }
-
-    .details p {
-        font-size: 14px;
-    }
-
-    .about {
-        flex-direction: column;
-        gap: 3vw;
-    }
-
-    .about .right-img img {
-        width: 70vw;
+    .logo{
         height: auto;
+       
+
+    }
+
+    .logo img {
+        height: 8vh;
+        width: 11vw;
+        
+    }
+
+    .nav-links a {
+        font-size: .9em;
+      
+       
+    }
+   
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 480px) {
+    .logo{
+        gap: 5vw;
+    }
+    .logo img {
+        height: 8vh;
+    }
+
+    .nav-links a {
+        font-size: 0.8em;
+    }
+}
+.account-details ul li{
+    color: crimson;
+    font-size: 1.3em;
+}
+.account-details p{
+    font-size: 1.3em;
+}
+.reg-instruction h1 ,#imp-dates h1,.account-details h1{
+    display: flex;
+    background-color: #0056b3;
+    justify-content: center;
+    color: white;
+    width: 80%;
+    display: flex;
+    margin-left: 10%;
+    border-radius: 50px;
+    padding: 1vh;
+    font-size: 2vh;
+    margin-bottom: 3vmax;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 1% 10%;
+  
+}
+
+th, td {
+    border: 1px solid #000000;
+    padding: 8px;
+    text-align: center;
+
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.reg-instruction, .account-details, .publication, .Accommodation ,#imp-dates, .call-for-papers, .speakers , .contact, .Org-team {
+    margin: 2% 10%;
+    text-align: justify;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+ul {
+   
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+.publication h2 a {
+    font-size: 1.8vmax;
+}
+
+.register {
+    text-align: center;
+    margin: 20px;
+}
+
+.register button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #4e070748;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.Accommodation p, .publication p{
+    font-size: 1.2em;
+}
+/* Responsive styles for mobile devices */
+@media (max-width: 480px) {
+    table{
+        width: 100%;
+        margin: 0;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+
+    th, td {
+        font-size: 0.9em;
+        padding: 5px;
+    }
+
+    .reg-instruction, .account-details, .imp-dates, .publication, .Accommodation,#imp-dates {
+        margin: 10px;
+    }
+
+    .register button {
+        width: 90%;
+        margin: 10px auto;
+        display: block;
+    }
+
+    ul li {
+        font-size: 1em;
     }
 }
 
-/* Desktops and larger screens (min-width: 769px) */
-@media (min-width: 769px) {
-    /* No changes needed for larger screens, but you can add styles if necessary */
+
+
+.Org-team h1, .Org-team h2, .Org-team h3 {
+    margin-bottom: 10px;
 }
 
-/* General styles for Contact and Organizing Team sections */
- .org-team {
+.Org-team h2 {
+    font-size: 5em;
+    background-color: #0056b3;
+    color: white;
+    width: 80%;
+    border-radius: 50px;
+    margin-left: 10%;
+    font-size: 1.2vmax;
+    padding: 2vh;
+    text-align: center;
+}
+
+.Org-team h1 {
+    font-size: 1.5em;
+    color: crimson;
+    margin-left: 10%;
+
+}
+
+.Org-team h3 {
+    font-size: 1.2em;
+    color: #777;
+    line-height: 1.5;
+    margin-left: 10%;
+    font-weight: 300;
+}
+
+footer {
+    background-color:rgba(72, 72, 166, 0.504);
+    padding: 20px;
+    text-align: center;
+}
+
+footer .university-name p {
+    margin: 0;
+    font-size: 1em;
+    color: #333;
+}
+
+/* Responsive styles for tablets and smaller screens */
+@media (max-width: 768px) {
+    .Org-team {
+        padding: 10px;
+        margin: 0;
+        width: 100%;
+
+      
+    }
+
+    .Org-team h1 {
+        font-size: 1.8em;
+       margin: 0;
+       color: crimson;
+       margin-left: 5%;
+       
+       
+    }
+
+    .Org-team h2 {
+        font-size: 1.3em;
+       margin-left: 10%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .Org-team h3 {
+        font-size: 1.1em;
+        margin: 0;
+        font-weight: 300;
+        margin-left: 5%;
+    }
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 480px) {
+    .Org-team h1 {
+        font-size: 1.5em;
+    }
+
+    .Org-team h2 {
+        font-size: 1.2em;
+    }
+
+    .Org-team h3 {
+        font-size: 1em;
+    }
+
+    footer .university-name p {
+        font-size: 0.9em;
+    }
+}
+
+
+
+
+
+.call-for-papers h1 ,.speakers h1, .contact h1{
+    font-size: 1.5em;
+    color: white;
+    background-color:#0056b3;
+    text-align: center;
+    padding: 1vh;
+    text-transform: capitalize;
+    border-radius: 50px;
+}
+
+.call-for-papers h2 {
+    font-size: 1.5em;
+    color: crimson;
+}
+
+.call-for-papers p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.call-for-papers ul {
+    list-style: none;
+    padding: 0;
+}
+
+.call-for-papers li {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .university-name p {
+    margin: 0;
+    font-size: 1em;
+    color: #333;
+}
+
+/* Responsive styles for tablets and smaller screens */
+@media (max-width: 768px) {
+    .call-for-papers {
+        padding: 10px;
+    }
+
+    .call-for-papers h1 {
+        font-size: 1.8em;
+    }
+
+    .call-for-papers h2 {
+        font-size: 1.3em;
+    }
+
+    .call-for-papers p, .call-for-papers li {
+        font-size: 1.1em;
+    }
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 480px) {
+    .call-for-papers h1 {
+        font-size: 1.5em;
+    }
+
+    .call-for-papers h2 {
+        font-size: 1.2em;
+    }
+
+    .call-for-papers p, .call-for-papers li {
+        font-size: 1em;
+    }
+
+    footer .university-name p {
+        font-size: 0.9em;
+    }
+}
+
+
+
+.speakers h1 {
+    font-size: 2em;
+    color: white;
+    margin-bottom: 20px;
+    padding: 1vh;
+}
+
+#speaker-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-   
-    
+    gap: 20px;
 }
 
-
- .org-member {
-    flex: 1 1 45%; /* Adjusts the width to 45% of the container */
-    margin: 10px;
+.speaker {
+    flex: 1 1 calc(33.333% - 40px);
     box-sizing: border-box;
-}
-
-/* Mobile devices (max-width: 480px) */
-@media (max-width: 480px) {
-     .org-team {
-        flex-direction: column;
-        align-items: center;
-    }
-
-     .org-member {
-        flex: 1 1 100%; /* Full width on small screens */
-        margin: 5px 0;
-    }
-
-     .org-team h1 {
-        font-size: 1.2em;
-        text-align: center;
-    }
-}
-
-/* Tablets (max-width: 768px) */
-@media (max-width: 768px) {
-     .org-member {
-        flex: 1 1 48%; /* Slightly wider on tablets */
-    }
-}
-
-.contact{
-    padding-left: 5vw;
-    
-}
-.contact p{
-     line-height: 1vh;
-}
-.contact .para{
-    line-height: 3vh;
-    font-size: 1.3vw;
-}
-.contact .number{
-    line-height: .5vh;
-    
-  
-}
-.brochure{
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
     text-align: center;
-    width: 20%;
-    margin: 2.5vh  40%;
-  
-   
-  
-    
-    
-
 }
-.brochure a{
-    color: #f91a1a;
+
+.speaker img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.speaker h2 {
+    font-size: 1.5em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.speaker p {
+    font-size: 1.2em;
+    color: #777;
+    line-height: 1.5;
+}
+
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .university-name p {
+    margin: 0;
+    font-size: 1em;
+    color: #333;
+}
+
+/* Responsive styles for tablets and smaller screens */
+@media (max-width: 768px) {
+    .speaker {
+        flex: 1 1 calc(50% - 40px);
+    }
+
+    .speakers h1 {
+        font-size: 1.8em;
+    }
+
+    .speaker h2 {
+        font-size: 1.3em;
+    }
+
+    .speaker p {
+        font-size: 1.1em;
+    }
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 480px) {
+    .speaker {
+        flex: 1 1 100%;
+    }
+
+    .speakers h1 {
+        font-size: 1.5em;
+    }
+
+    .speaker h2 {
+        font-size: 1.2em;
+    }
+
+    .speaker p {
+        font-size: 1em;
+    }
+
+    footer .university-name p {
+        font-size: 0.9em;
+    }
+}
+
+
+
+.contact h1, .contact h2, .contact h4 {
+    margin-bottom: 10px;
+}
+
+.contact h1 {
+    font-size: 1.7em;
+    color: white;
+}
+
+.contact h2 {
+    font-size: 1.5em;
+    color: #555;
+}
+
+.contact h4 {
+    font-size: 1.2em;
+    color: #777;
+}
+
+.contact p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.contact a {
+    color: #007bff;
     text-decoration: none;
-    text-transform: capitalize;
-    font-size: 4vh;
-
+    transition: color 0.3s;
+    
 }
 
+.contact a:hover {
+    color: #0056b3;
+}
 
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
 
+footer .university-name p {
+    margin: 0;
+    font-size: 1em;
+    color: #333;
+}
 
+/* Responsive styles for tablets and smaller screens */
+@media (max-width: 768px) {
+    .contact h1 {
+        font-size: 1.8em;
+    }
 
+    .contact h2 {
+        font-size: 1.3em;
+    }
 
+    .contact h4 {
+        font-size: 1.1em;
+    }
 
+    .contact p {
+        font-size: 1.1em;
+    }
+}
 
+/* Responsive styles for mobile devices */
+@media (max-width: 480px) {
+    .contact h1 {
+        font-size: 1.5em;
+    }
 
+    .contact h2 {
+        font-size: 1.2em;
+    }
 
+    .contact h4 {
+        font-size: 1em;
+    }
 
+    .contact p {
+        font-size: 1em;
+    }
 
-
+    footer .university-name p {
+        font-size: 0.9em;
+    }
+}
