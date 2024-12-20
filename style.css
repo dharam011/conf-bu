@@ -86,17 +86,25 @@ html , body{
     margin:0 5vmin;
 
 }
-.about .left h3{
-    background-color: #21a4dc;
-    padding: 1vh;
+.tour-dest h3{
+    background-color: #007bff;
     font-size: 1.5em;
-    margin-bottom: 1vh;
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+    padding: 1vh;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 50px;
+    margin: 2vh 8vw;
+    width: 80%;
+    margin-bottom: 2vh;
 }
 
 .about .left h2{
-    background-color: #21a4dc;
+    background-color: #21a4dc76;
     padding: 1vh;
     font-size: 1.5em;
+    text-transform: capitalize;
 }
 .about .left {
     flex: 1;
@@ -110,7 +118,7 @@ html , body{
     line-height: 1.5vw;
 }
 .about .left h1{
-    background-color: #21a4dc;
+    background-color: #21a4dc76;
     padding: 1vh;
     font-size: 1.5em;
 }
@@ -169,28 +177,37 @@ html , body{
 
 .imp-dates {
     margin:0 9vmin;
+    padding:  2vh;
     
 }
 
 .imp-dates h1 {
-    background-color: #21a4dc;
-    font-size: 2em;
+    background-color: #007bff;
+    font-size: 1.5em;
     margin-bottom: 10px;
-    color: black;
+    color: rgb(255, 255, 255);
     padding: 1vh;
+    text-transform: uppercase;
     text-align: center;
+    border-radius: 50px;
+    margin:  0 5vw;
 }
 
-.imp-dates ul {
-    list-style: none;
+#imp-dates ul ,.imp-dates li{
+    
     padding: 0;
 }
 
-.imp-dates li {
-    margin: 5px 0;
+#imp-dates ul li, .imp-dates li {
+    margin: 1vh 5vw;
     font-size: 1.2em;
+    font-weight: bold;
 }
-
+#imp-dates ul li{
+    margin: 1vh 0;
+    font-size: 1.2em;
+    font-weight: bold; 
+}
 /* Responsive styles for tablets and smaller screens */
 @media (max-width: 768px) {
     .about {
@@ -220,6 +237,12 @@ html , body{
 }
     .hero-details h2, .hero-details p {
         font-size: 1.2em;
+    }
+    .about .left h1 {
+        font-size: 1.3em;
+    }
+    .imp-dates h1{
+        font-size: 1.3em;
     }
 }
 
@@ -251,12 +274,19 @@ html , body{
        width: 80vw;
     }
     .imp-dates h1 {
-        font-size: 1.5em;
+        font-size: 1.1em;
     }
 
-    .imp-dates li {
-        font-size: 1em;
+    .imp-dates li,#imp-dates ul li {
+        font-size: .9em;
     }
+    .about .left h1{
+        font-size: 1.1em;
+    }
+    .about .left h2{
+        font-size: 1.1em;
+    }
+
 }
 
 header {
@@ -307,17 +337,19 @@ header {
         flex-direction: column;
         align-items: flex-start;
     }
-    .about .left h3{
-        font-size: 2vh;
+    .tour-dest h3{
+        font-size: 1.1em;
     }
     .about .left h2{
-        font-size: 1.7vh;
+        font-size: 1.1em;
     }
 
     .nav-links {
        
-        align-items: flex-start;
-        gap: 1vmin;
+        align-items:center;
+        justify-content: center;
+        
+        
     }
     .logo{
         height: auto;
@@ -332,7 +364,8 @@ header {
     }
 
     .nav-links a {
-        font-size: .9em;
+        font-size: .6em;
+        font-weight: 200;
       
        
     }
@@ -342,22 +375,28 @@ header {
 /* Responsive styles for mobile devices */
 @media (max-width: 480px) {
     .logo{
-        gap: 5vw;
-    }
+         gap: 1vh;   }
     .logo img {
-        height: 8vh;
+        height: 6vh;
+        width: 13vw;
     }
-
+    .account-details p{
+        font-size: 1em;
+    }
     .nav-links a {
-        font-size: 0.8em;
+        font-size: 0.7em;
+    }
+    .account-details ul li{
+        color: crimson;
+        font-size: 1em;
     }
 }
 .account-details ul li{
     color: crimson;
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
 .account-details p{
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 .reg-instruction h1, 
 #imp-dates h1, 
@@ -365,19 +404,22 @@ header {
 .speakers h1, 
 .call-for-papers h1, 
 .contact h1, 
-.Org-team h2 {
+.Org-team h2,
+.publication h1,
+ .Accommodation h1  {
     display: flex;
     background-color: #0056b3;
     justify-content: center;
     color: white;
-    width: 80%;
-    margin-left: 10%;
+    width: 100%;
+    
     border-radius: 50px;
     padding: 1vh;
-    font-size: 2vh;
+    font-size: 2.5vh;
     margin-bottom: 3vmax;
     margin-top: 2vh;
     text-align: center;
+    text-transform: uppercase;
     
 }
 
@@ -419,7 +461,7 @@ li {
     font-size: 1.2em;
 }
 .publication h2 a {
-    font-size: 1.7vmax;
+    font-size: 1.6vmax;
 }
 
 .register {
@@ -436,11 +478,12 @@ li {
     border-radius: 5px;
     cursor: pointer;
 }
-.Accommodation p, .publication p , .Accommodation{
+.Accommodation p, .publication p {
     font-size: 1.3em;
 }
 #imp-dates a {
     font-size: 1.3em;
+    
 }
 /* Responsive styles for mobile devices */
 @media (max-width: 480px) {
@@ -456,6 +499,13 @@ li {
         font-size: .7em;
         
     }
+    .publication h2{
+        font-size: 1em;
+    }
+    .Accommodation p, .publication p, .reg-instruction ul li{
+        font-size: .9em;
+        list-style:circle;
+    }
 
     .reg-instruction, .account-details, .imp-dates, .publication, .Accommodation,#imp-dates {
         margin: 10px;
@@ -470,8 +520,8 @@ li {
         display: block;
     }
 
-    ul li {
-        font-size: 1em;
+    #imp-dates a {
+        font-size: .95em;
     }
 }
 
@@ -558,15 +608,15 @@ footer .university-name p {
 /* Responsive styles for mobile devices */
 @media (max-width: 480px) {
     .Org-team h1 {
-        font-size: 1.5em;
+        font-size: 1em;
     }
 
     .Org-team h2 {
-        font-size: 1.2em;
+        font-size: .9em;
     }
 
     .Org-team h3 {
-        font-size: 1em;
+        font-size: .8em;
     }
 
     footer .university-name p {
@@ -591,8 +641,9 @@ footer .university-name p {
     border-radius: 50px;
 } */
 
+
 .call-for-papers h2 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: crimson;
 }
 
@@ -621,11 +672,11 @@ footer .university-name p {
     }
 
     .call-for-papers h1 {
-        font-size: 1.8em;
+        font-size: 1.em;
     }
 
     .call-for-papers h2 {
-        font-size: 1.3em;
+        font-size: 1.1em;
     }
 
     .call-for-papers p, .call-for-papers li {
@@ -636,7 +687,7 @@ footer .university-name p {
 /* Responsive styles for mobile devices */
 @media (max-width: 480px) {
     .call-for-papers h1 {
-        font-size: 1.5em;
+        font-size: 1.1em;
     }
 
     .call-for-papers h2 {
@@ -644,7 +695,7 @@ footer .university-name p {
     }
 
     .call-for-papers p, .call-for-papers li {
-        font-size: 1em;
+        font-size: .8em;
     }
 
     footer .university-name p {
@@ -724,15 +775,15 @@ footer .university-name p {
     }
 
     .speakers h1 {
-        font-size: 1.5em;
-    }
-
-    .speaker h2 {
         font-size: 1.2em;
     }
 
-    .speaker p {
+    .speaker h2 {
         font-size: 1em;
+    }
+
+    .speaker p {
+        font-size: .9em;
     }
 
     footer .university-name p {
@@ -764,7 +815,7 @@ footer .university-name p {
 .contact p {
     font-size: 1.2em;
     line-height: 1.5;
-    margin-bottom: 20px;
+    
 }
 
 .contact a {
@@ -802,7 +853,7 @@ footer .university-name p {
 /* Responsive styles for mobile devices */
 @media (max-width: 480px) {
     .contact h1 {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 
     .contact h2 {
@@ -814,7 +865,7 @@ footer .university-name p {
     }
 
     .contact p {
-        font-size: 1em;
+        font-size: .9em;
     }
 
     footer .university-name p {
