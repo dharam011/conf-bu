@@ -524,6 +524,7 @@ li {
     #imp-dates a {
         font-size: .95em;
     }
+    
 }
 
 
@@ -596,6 +597,7 @@ footer .university-name p {
         text-align: center;
         display: flex;
         justify-content: center;
+     width: 80%;  
     }
 
     .Org-team h3 {
