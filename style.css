@@ -552,7 +552,7 @@ li {
 
 .Org-team h3 {
     font-size: 1.2em;
-    color: #777;
+   
     line-height: 1.5;
     margin-left: 10%;
     font-weight: 300;
@@ -737,13 +737,13 @@ footer .university-name p {
 
 .speaker h2 {
     font-size: 1.5em;
-    color: #555;
+    
     margin-bottom: 10px;
 }
 
 .speaker p {
     font-size: 1.2em;
-    color: #777;
+   
     line-height: 1.5;
 }
 
@@ -804,12 +804,12 @@ footer .university-name p {
 
 .contact h2 {
     font-size: 1.5em;
-    color: #555;
+   
 }
 
 .contact h4 {
     font-size: 1.2em;
-    color: #777;
+ 
 }
 
 .contact p {
