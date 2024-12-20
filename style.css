@@ -488,8 +488,9 @@ li {
 /* Responsive styles for mobile devices */
 @media (max-width: 480px) {
     table{
-        width: 100%;
+        width: 96%;
         margin: 0;
+        margin-left: 2%;
     }
     h1 {
         font-size: 1em;
@@ -511,7 +512,7 @@ li {
         margin: 10px;
     }
     .publication a{
-        font-size: .8em;
+        font-size: .5em;
     }
 
     .register button {
